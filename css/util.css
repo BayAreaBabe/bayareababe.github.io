@@ -3017,9 +3017,9 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .tit7 {
 	font-family: Poppins;
 	font-weight: 500;
-	font-size: 22px;
+	font-size: 35px;
 	line-height: 1.2;
-	color: #222222;
+	color: white;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
