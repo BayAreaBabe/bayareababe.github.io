@@ -484,12 +484,10 @@ input[type="date" i] {
 .wrap-menu-header {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 120px;
   top: 0;
   left: 0;
   z-index: 100;
-  float: center;
-
 }
 
 .wrap_header {
@@ -500,16 +498,15 @@ input[type="date" i] {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: transparent;
   justify-content: space-between;
   align-items: center;
-  float: center;
 }
 
 .header-fixed .wrap-menu-header {
   position: fixed;
-  height: auto;
+  height: 100px;
   background: rgba(255,255,255,0.9);
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 
@@ -570,49 +567,18 @@ input[type="date" i] {
 .main_menu > li {
   padding-top: 10px;  
   padding-bottom: 10px; 
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.main_header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main_header li {
-  display: block;
-  position: relative;
-
+  margin-left: 1px;
+  margin-right: 1px;
 } 
-.main_header > li > a {
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: white;
-  padding: 15px;
-}
-.header-fixed .main_header > li > a {
-  color: #222222;
-}
 
-.main_header > li:hover > a {
-  color: #ec951d;
-  text-decoration: none;
-}
 .main_menu > li > a {
   font-family: Montserrat;
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  color: black;
-  padding: 15px;
-}
+  color: white;
+  padding: 10px;
+} 
 
 .header-fixed .main_menu > li > a {
   color: #222222;
@@ -692,7 +658,7 @@ input[type="date" i] {
 */
 .social a {
   font-size: 15px;
-  color: black;
+  color: white;
 }
 
 .header-fixed .social a {
@@ -706,8 +672,8 @@ input[type="date" i] {
 .btn-show-sidebar {
   width: 26px;
   height: 15px;
-  border-top: 2px black;
-  border-bottom: 2px black;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .header-fixed .btn-show-sidebar {
@@ -726,7 +692,7 @@ input[type="date" i] {
     margin-right: 4px;
   }
 
-  .social {padding-right: 0px;}
+  .social {padding-right: 5px;}
 
   .logo {
     height: 45px;
@@ -744,6 +710,88 @@ input[type="date" i] {
 }
 
 
+/*[ Sidebar ]
+///////////////////////////////////////////////////////////
+*/
+.sidebar {
+  position: fixed;
+  z-index: 1200;
+  width: 390px;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+  top: 0;
+  right: -390px;
+}
+
+@media (max-width: 576px) {
+  .sidebar {width: 300px;}
+}
+
+.show-sidebar {
+  right: 0px;
+}
+
+.btn-hide-sidebar {
+  position: absolute;
+  font-size: 20px;
+  color: #111111;
+  padding: 10px;
+  top: 20px;
+  right: 20px;
+}
+
+.overlay-sidebar {
+  position: fixed;
+  z-index: 1150;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.show-overlay-sidebar {
+  visibility: visible;
+  background-color: rgba(0,0,0,0.65);
+}
+
+/* ------------------------------------ */
+.item-gallery-sidebar {
+  display: block;
+  position: relative;
+  width: calc((100% - 30px) / 3 );
+  margin: 5px;
+}
+
+.item-gallery-sidebar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.item-gallery-sidebar:hover:after {
+  background-color: rgba(236,29,37,0.7);
+}
+
+@media (max-width: 576px) {
+  .wrap_header {
+    height: 80px;
+  }
+
+  .gallery-sidebar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 
 /*[ Slide1 ]
@@ -947,12 +995,10 @@ input[type="date" i] {
   opacity: 0.9;
 }
 
-/* this is if I want to have hover
-
 .btn2:hover {
   background-color: #ec951d;
   color: white;
-}*/
+}
 
 
 
